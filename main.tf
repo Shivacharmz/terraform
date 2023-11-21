@@ -1,4 +1,9 @@
 resource "local_file" "pet" {
-  filename = "/c/Windows pets.txt"
-  content  = "we hate pets!"
+filename = var.filename
+content = var.content
+}
+resource "random_pet" "mypet" {
+prefix = "Mr"
+separator = "."
+length = "1"
 }
